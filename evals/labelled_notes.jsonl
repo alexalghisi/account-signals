@@ -1,0 +1,16 @@
+{"text": "CFO said they are comparing us with Chargebee before renewing their billing stack.", "intent": "evaluating_competitor"}
+{"text": "They asked for a comparison sheet against Recurly and Stripe Billing.", "intent": "evaluating_competitor"}
+{"text": "Shortlisted three alternatives, decision expected next month.", "intent": "evaluating_competitor"}
+{"text": "Head of finance plans to cancel the current provider after our trial.", "intent": "evaluating_competitor"}
+{"text": "They are launching in the US next quarter and need tax handling for new regions.", "intent": "expansion"}
+{"text": "Customer wants more seats for the new sales team.", "intent": "expansion"}
+{"text": "Adding an additional product line in Q1, wants it on the same contract.", "intent": "expansion"}
+{"text": "Founder thinks our fees are too expensive for their current volume.", "intent": "pricing_concern"}
+{"text": "Procurement asked for a discount before signing.", "intent": "pricing_concern"}
+{"text": "They said pricing is fine but want quarterly invoicing.", "intent": "none"}
+{"text": "Champion is leaving the company at the end of the month.", "intent": "churn_risk"}
+{"text": "They will not renew unless the payout delays are fixed.", "intent": "churn_risk"}
+{"text": "Asked how to downgrade to the starter plan.", "intent": "churn_risk"}
+{"text": "Quick intro call, nothing concrete yet.", "intent": "none"}
+{"text": "Sent the security questionnaire back, waiting on legal.", "intent": "none"}
+{"text": "Great call, they love the dashboard.", "intent": "none"}
