@@ -14,6 +14,8 @@ class IdealCustomerProfile:
     min_employees: int
 
 
+FIT_FACTORS = frozenset({"sells_software", "industry", "region", "revenue", "size"})
+
 DEFAULT_ICP = IdealCustomerProfile(
     industries=frozenset({"saas", "developer tools", "edtech", "productivity"}),
     regions=frozenset({"GB", "US", "CA", "DE", "NL", "FR", "IE", "SE"}),
