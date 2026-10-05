@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", system-ui, sans-serif;
+    background: #f4f6fb;
+    color: #1c2333;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 28px;
+    background: #fff;
+    border-bottom: 1px solid #e3e7ef;
+}
+
+.top h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.stats,
+.meta {
+    color: #5b6475;
+    font-size: 13px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    padding: 24px 28px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e3e7ef;
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+}
+
+.tier {
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 13px;
+}
+
+.tier-A {
+    background: #0f9d58;
+}
+
+.tier-B {
+    background: #f4b400;
+}
+
+.tier-C {
+    background: #9aa0a6;
+}
+
+.priority {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.meta {
+    margin: 6px 0;
+}
+
+ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    font-size: 13px;
+}
