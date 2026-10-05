@@ -1,0 +1,9 @@
+account_id,name,industry,country,employees,annual_revenue_usd,sells_software
+acc_001,Northwind Analytics,SaaS,GB,140,18000000,true
+acc_002,Bluepeak Learning,EdTech,CA,60,6500000,true
+acc_003,Harbor Freight Logistics,Logistics,US,900,120000000,false
+acc_004,Lumen Dev Tools,Developer Tools,DE,35,4200000,true
+acc_005,Quillstone Notes,Productivity,NL,22,2600000,true
+acc_006,Ridgeway Consulting,Consulting,GB,300,40000000,false
+acc_007,Sparrow Fitness Apps,Health & Fitness,US,18,1500000,true
+acc_008,Tidepool Games,Gaming,SE,75,9000000,true
