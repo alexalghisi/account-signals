@@ -1,0 +1,11 @@
+account_id,kind,occurred_on
+acc_001,pricing_page_visit,2026-09-30
+acc_001,trial_started,2026-09-28
+acc_001,docs_signup,2026-09-25
+acc_002,pricing_page_visit,2026-09-10
+acc_002,webinar_attended,2026-08-20
+acc_004,job_post_billing,2026-10-01
+acc_004,docs_signup,2026-09-29
+acc_005,pricing_page_visit,2026-07-02
+acc_006,webinar_attended,2026-09-30
+acc_008,trial_started,2026-09-15
