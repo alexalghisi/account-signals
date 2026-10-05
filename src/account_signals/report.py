@@ -3,15 +3,18 @@ from __future__ import annotations
 from html import escape
 from importlib import resources
 
+from account_signals.icp import FIT_FACTORS
 from account_signals.models import Account, Score
 
 _CSS = resources.files("account_signals").joinpath("report.css").read_text()
 
 
 def _reasons(score: Score) -> str:
+    signals = [reason for reason in score.reasons if reason.factor not in FIT_FACTORS]
+    fit = [reason for reason in score.reasons if reason.factor in FIT_FACTORS]
     items = (
-        f"<li><b>{reason.points:+.0f}</b> {escape(reason.detail)}</li>"
-        for reason in score.reasons[:4]
+        f"<li><b>{round(reason.points):+d}</b> {escape(reason.detail)}</li>"
+        for reason in [*signals, *fit][:4]
     )
     return f"<ul>{''.join(items)}</ul>"
 
@@ -20,12 +23,12 @@ def _card(account: Account, score: Score) -> str:
     tier = score.tier.value
     meta = (
         f"{escape(account.industry)} · {escape(account.country)} · {account.employees} people"
-        f" · fit {score.fit:.0f} · intent {score.intent:.0f}"
+        f" · fit {round(score.fit)} · intent {round(score.intent)}"
     )
     return (
         f'<article class="card"><header><span class="tier tier-{tier}">{tier}</span>'
         f"<h2>{escape(account.name)}</h2>"
-        f'<span class="priority">{score.priority:.0f}</span></header>'
+        f'<span class="priority">{round(score.priority)}</span></header>'
         f'<p class="meta">{meta}</p>{_reasons(score)}</article>'
     )
 
