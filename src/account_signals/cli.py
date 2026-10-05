@@ -4,6 +4,7 @@ import argparse
 from datetime import date
 from pathlib import Path
 
+from account_signals.icp import FIT_FACTORS
 from account_signals.loader import load_directory
 from account_signals.pipeline import refresh
 from account_signals.store import Store, connect
@@ -23,7 +24,8 @@ def main() -> None:
     summary = refresh(store, build_classifier(connection), args.today)
     print(f"classified {summary.notes_classified} notes, scored {summary.accounts_scored} accounts")
     for account, score in store.scores():
-        top = score.reasons[0].detail if score.reasons else ""
+        signal = next((r for r in score.reasons if r.factor not in FIT_FACTORS), None)
+        top = signal.detail if signal else "no recent buying signals"
         print(f"{score.tier.value}  {score.priority:6.1f}  {account.name:<28} {top}")
     usage = store.llm_usage()
     print(
